@@ -22,15 +22,15 @@ Medecin::Medecin(string nom, int horaires, Specialiste* uneSpecialiste) {
 
 
 Medecin::~Medecin() {
-	// delete specialite_;
-	// specialite_ = nullptr;
+	//delete specialite_;
+	//specialite_ = nullptr;
 }
 
 string Medecin::obtenirNom() const {
 	return	nom_;
 }
 
-Specialiste Medecin::obtenirSpecialiste() const { // NOTE : C'est un pointeur, faut l'indiquer
+Specialiste Medecin::obtenirSpecialiste() const { 
 	return *specialite_;
 }
 

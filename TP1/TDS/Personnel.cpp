@@ -1,7 +1,7 @@
 /********************************************
 * Titre: Travail pratique #1 - Medecin.cpp
 * Date: 31 janvier 2017
-* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *******************************************/
 
 
@@ -36,7 +36,7 @@ Personnel::~Personnel()
 void Personnel::ajouterMedecin(Medecin& unMedecin)
 {
 	
-	if (compteurMedecin_ == capaciteTableauMedecins_) // NOTE : Test d'égalité c'est == pas = !!!
+	if (compteurMedecin_ == capaciteTableauMedecins_) 
 	{
 		Medecin* tableauMedTmp = nullptr;
 		capaciteTableauMedecins_ *= 2;
@@ -77,6 +77,7 @@ void Personnel::ajouterInfirmier(Infirmier& unInfirmier)
 
 void Personnel::afficherMedecins()
 {
+	system("Color A");
 	std::cout << "====================================Tableau medecins"
 		<< "=====================================" << endl;
 	std::cout << "===================================================="
@@ -90,7 +91,7 @@ void Personnel::afficherMedecins()
 	for (unsigned i = 0; i < compteurMedecin_; i++)
 	{
 
-		// NOTE : T'appelle un function donc c'est obtenirNom() pas obtenirNom
+
 
 		std::cout <<"|  " << tableauMedecins_[i].obtenirNom()
 			<< std::string(24 - tableauMedecins_[i].obtenirNom().size(), ' ') << "|"

@@ -1,7 +1,7 @@
 /********************************************
 * Titre: Travail pratique #1 - Medecin.cpp
 * Date: 31 janvier 2017
-* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *******************************************/
 
 #ifndef PERSONNEL_H

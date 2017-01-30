@@ -1,7 +1,7 @@
 /**************************************************
  * Titre: Travail pratique #1 - Main.cpp
- * Date: 10 janvier 2017
- * Auteur:
+ * Date: 31 janvier 2017
+ * Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 **************************************************/
 
  #include "Specialiste.h"
@@ -37,7 +37,7 @@ int main()
 	Infirmier infirmier_5 = Infirmier("Bayard", "Nicolas", 13);
 	Infirmier infirmier_6 = Infirmier("Yoshida","Noboru",6);
 	Infirmier infirmier_7 = Infirmier("Bellemare Alford","Daphnee",89);
-	Infirmier infirmier_8 = Infirmier("Messier","Freerique",200);
+	Infirmier infirmier_8 = Infirmier("Messier","Frederique",200);
 	Infirmier infirmier_9 = Infirmier("Kang","Brandon",3);
 	Infirmier infirmier_10 = Infirmier("Marcoux","Emilie",26);
 	Infirmier infirmier_11 = Infirmier("Parenteau","Zoe",20);

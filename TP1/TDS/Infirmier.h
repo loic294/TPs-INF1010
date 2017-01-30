@@ -1,22 +1,21 @@
 /********************************************
 * Titre: Travail pratique #1 - Infirmier.h
-* Date: 10 janvier 2017
-* Auteur:
+* Date: 31 janvier 2017
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *******************************************/
 
 #ifndef INFIRMIER_H
 #define INFIRMIER_H
 
-#include <string>
 
-using namespace std;
+#include <string>
 
 class Infirmier
 {
 public:
 	// Constructeur par defaut et par paramètres
 	Infirmier();
-	Infirmier(string nom, string prenom, int nbChambres);
+	Infirmier(std::string nom, std::string prenom, int nbChambres);
 
 	// Destructeur
 	~Infirmier();

@@ -1,7 +1,7 @@
 /**********************************************
 * Titre: Travail pratique #1 - Infirmier.cpp
 * Date: 10 janvier 2017
-* Auteur:
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *********************************************/
 
 
@@ -13,7 +13,7 @@ Infirmier::Infirmier() {
 	nbChambre_ = 0;
 }
 
-Infirmier::Infirmier(string nom, string prenom, int nbChambres) {
+Infirmier::Infirmier(std::string nom, std::string prenom, int nbChambres) {
 	prenom_ = prenom;
 	nom_ = nom;
 	nbChambre_ = nbChambres;
