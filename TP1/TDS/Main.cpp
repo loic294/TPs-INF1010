@@ -18,6 +18,11 @@ int main()
 {
         //C'est a vous de voir si vous devez allouer dynamiquement ou non les elements
 
+	/*
+		QUESTION #1 :
+		
+	*/
+
 	//1-  Creez un objet du type Infirmier � l'aide du constructeur par d�faut
 
 	Infirmier infirmier_1 = Infirmier();
@@ -122,6 +127,9 @@ int main()
 	//15- Affichez la liste des infirmiers
 
 	personnel.afficherInfirmiers();
+
+	// NOTE : Nous n'effectuons pas de désalocation de nos pointeurs à ce point puisqu'il est fait 
+	// automatiquement lors le code atteint la fin du main().
 
 	return 0;
 }
