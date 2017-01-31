@@ -1,0 +1,12 @@
+Debug\
+Debug/
+.exe
+.suo
+.ilk
+.pdb
+.obj
+.log
+.idb
+.tlog
+*.suo
+*.pdb
