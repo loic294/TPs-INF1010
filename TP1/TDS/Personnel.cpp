@@ -10,6 +10,9 @@
 #include "Infirmier.h"
 #include "Personnel.h"
 
+/*
+Constructeur par défaut de la classe Personnel
+*/
 Personnel::Personnel()
 {
 	tableauMedecins_ = new Medecin[3];
@@ -22,17 +25,20 @@ Personnel::Personnel()
 
 }
 
+/*
+Destructeur de la classe Infirmier. Il est vide puisqu'il n'y a pas de pointeurs en attribut
+*/
 Personnel::~Personnel()
 {
 	delete[] tableauMedecins_;
-	capaciteTableauMedecins_ = 3;
-	compteurMedecin_ = 0;
-
 	delete[] tableauInfirmiers_;
-	capaciteTableauInfirmiers_ = 3;
-	compteurInfirmier_ = 0;
+
 } 
 
+/*
+Ajoute un médecin
+\param [in/ou]		unMedecin		Passe le médecin
+*/
 void Personnel::ajouterMedecin(Medecin& unMedecin)
 {
 	
@@ -55,6 +61,10 @@ void Personnel::ajouterMedecin(Medecin& unMedecin)
 	
 }
 
+/*
+Ajoute un infirmier
+\param [in/ou]		unInfirmier		Passe l'infirmier
+*/
 void Personnel::ajouterInfirmier(Infirmier& unInfirmier)
 {
 
@@ -75,6 +85,9 @@ void Personnel::ajouterInfirmier(Infirmier& unInfirmier)
 	compteurInfirmier_++;
 }
 
+/*
+Affiche les médecins
+*/
 void Personnel::afficherMedecins()
 {
 	system("Color A");
@@ -107,7 +120,9 @@ void Personnel::afficherMedecins()
 }
 
 
-
+/*
+Affiche les infirmiers
+*/
 void Personnel::afficherInfirmiers()
 {
 

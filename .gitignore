@@ -10,3 +10,7 @@ Debug/
 .tlog
 *.suo
 *.pdb
+*.sdf
+*.obj
+*.tlog
+*.exe
