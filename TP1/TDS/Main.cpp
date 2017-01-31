@@ -20,7 +20,9 @@ int main()
 
 	/*
 		QUESTION #1 :
-		
+		C'est une aggrégation puisqu'on passe, par référence, l'objet de la classe Médecin à 
+		la classe Personnel. Si la classe personnel est démolie, l'objet du médecin ne sera pas
+		démoli.
 	*/
 
 	//1-  Creez un objet du type Infirmier � l'aide du constructeur par d�faut
@@ -106,10 +108,12 @@ int main()
 
 	//12- Expliquez la relation entre les deux objets Medecin et Specialite. Justifiez votre r�ponse
 
-	// La spécialité est un attribut de la classe Medecin. Spécialité est en fait un simple pointeur
-	// qui peut être modifié comme tout attribut de la classe Medecin. En plus de pouvoir changer le
-	// pointeur dans Medecin, il est possible d'accéder par l'attribut à l'objet de Medecin pour le lire
-	// ou le modifier.
+	/*
+		QUESTION #2 :
+		C'est une aggrégation puisqu'on passe, à l'aide d'un pointeur, l'objet de la classe Specilite à
+		la classe Medecin. Si la classe Medecin est démolie, l'objet de la specialite ne sera pas
+		démoli.
+	*/
 
 	//13- Ajoutez les 6 objets du type Medecin � tableauMedecins de l'objet Personnel d�j� cr��
 
