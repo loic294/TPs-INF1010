@@ -1,3 +1,9 @@
+/********************************************
+* Titre: Travail pratique #2 - Specialite.h
+* Date: 8 janvier 2017
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
+*******************************************/
+
 #ifndef SPECIALITE_H
 #define SPECIALITE_H
 
@@ -17,7 +23,9 @@ public:
 	void modifierDomaine(const std::string& domaine);
 	void modifierNiveau(unsigned int niveau);
 
-	void information() const; // A MODIFIER... (si necessaire) 
+	void information(); // A MODIFIER... (si necessaire) 
+
+	friend std::ostream& operator<<(std::ostream& o, const Specialite& specialite);
 
 	// _________TP2___________
 private:

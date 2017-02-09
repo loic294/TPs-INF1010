@@ -1,3 +1,9 @@
+/********************************************
+* Titre: Travail pratique #2 - Infirmier.cpp
+* Date: 8 janvier 2017
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
+*******************************************/
+
 #include "Infirmier.h"
 #include <iostream>
 #include <iomanip>
@@ -9,9 +15,6 @@ Infirmier::Infirmier()
 
 Infirmier::Infirmier(const std::string & nom, const std::string & prenom, unsigned int nbChambre): nom_(nom), prenom_(prenom), nbChambre_(nbChambre)
 {
-	nom_ = nom;
-	prenom_ = prenom;
-	nbChambre_ = nbChambre;
 }
 
 
@@ -54,12 +57,14 @@ void Infirmier::modifierNbChambre(unsigned int nbChambre)
 	nbChambre_ = nbChambre;
 }
 
-void Infirmier::information() const // A MODIFIER... (si necessaire)
+void Infirmier::information() // A MODIFIER... (si necessaire) DONE!
 {
-	std::cout << "| " << infirmier.obtenirNomComplet() << AFFICHER_ESPACE(espace_nom - infirmier.obtenirNom().size());
-	std::cout << " | " << AFFICHER_ESPACE(espace_chambre - std::to_string(infirmier.nbChambre_).size()/2);
-	std::cout << infirmier.nbChambre_ << AFFICHER_ESPACE(espace_chambre);
+
+	std::cout << "| " << obtenirNomComplet() << AFFICHER_ESPACE(espace_nom - obtenirNomComplet().size());
+	std::cout << " | " << AFFICHER_ESPACE(espace_chambre - std::to_string(nbChambre_).size()/2);
+	std::cout << nbChambre_ << AFFICHER_ESPACE(espace_chambre);
 	std::cout << "|" << std::endl;
+
 }
 
 bool Infirmier::operator==(const Infirmier& infirmier) const {
@@ -73,3 +78,7 @@ bool Infirmier::operator==(const std::string& nomComplet) const {
 bool operator==(const std::string& nomComplet, const Infirmier& infirmier) {
 	return infirmier.obtenirNomComplet() == nomComplet;
 };
+
+std::ostream& operator<<(std::ostream& o, Infirmier& infirmier) {
+	return o;
+}

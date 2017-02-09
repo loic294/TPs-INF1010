@@ -1,6 +1,6 @@
 /********************************************
-* Titre: Travail pratique #1 - Medecin.cpp
-* Date: 31 janvier 2017
+* Titre: Travail pratique #2 - Medecin.cpp
+* Date: 8 janvier 2017
 * Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *******************************************/
 
@@ -24,6 +24,19 @@ Construteur avec les paramètres pour la classe Mdecin
 */
 Medecin::Medecin(const string& nom, int horaires, Specialite* specialite): nom_(nom), horaires_(horaires), specialite_(specialite)
 {
+}
+
+/*
+Construteur avec les paramètres pour la classe Mdecin
+\param [in]		nom				Indique le nom
+\param [in]		horaires		Indique l'horaire
+\param [in]		uneSpecialiste	Indique un spécialité
+*/
+Medecin::Medecin(const Medecin* medecin)
+{
+	nom_ = medecin->obtenirNom();
+	horaires_ = medecin->obtenirHoraires();
+	specialite_ = &medecin->obtenirSpecialite();
 }
 
 
@@ -88,11 +101,34 @@ void Medecin::modifierSpecialite(Specialite* specialite)
 }
 
 //Affiche les informations de la classe Medecin
-void Medecin::information() const
+void Medecin::information()
 {
 	std::cout << "| " << nom_ << AFFICHER_ESPACE(espace_nom - nom_.size());
 	std::cout << " | " << AFFICHER_ESPACE(espace_horaires - std::to_string(horaires_).size()) << horaires_;
 	std::cout << AFFICHER_ESPACE(espace_horaires);
 	obtenirSpecialite().information();
 	std::cout << endl;
+
+}
+
+
+bool Medecin::operator==(const Medecin& medecin) const {
+	return this->obtenirNom() == medecin.obtenirNom();
+}
+
+bool Medecin::operator==(const std::string& nomComplet) const {
+	return this->obtenirNom() == nomComplet;
+};
+
+bool operator==(const std::string& nom, const Medecin& medecin) {
+	return medecin.obtenirNom() == nom;
+};
+
+std::ostream& operator<<(std::ostream& o, Medecin& medecin) {
+	medecin.information();
+	return o;
+}
+
+Medecin Medecin::operator=(const Medecin& medecin) const {
+	return medecin;
 }

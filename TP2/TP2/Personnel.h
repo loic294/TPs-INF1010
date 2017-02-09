@@ -1,3 +1,9 @@
+/********************************************
+* Titre: Travail pratique #2 - Personnel.h
+* Date: 8 janvier 2017
+* Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
+*******************************************/
+
 #ifndef PERSONNEL_H
 #define PERSONNEL_H
 
@@ -31,11 +37,17 @@ public:
 	void information() const; // A MODIFIER... (si necessaire)
 	// _________TP2___________
 
+	friend std::ostream& operator<<(std::ostream& o, const Infirmier& infirmier);
+
 private:
 	void afficherInfirmiers() const; // A MODIFIER... (si necessaire)
 	void afficherMedecins() const; // A MODIFIER... (si necessaire)
 
 	// _________TP2___________
+
+	vector<Medecin*> medecins_;
+	vector<Infirmier*> infirmiers_;
+
 };
 
 #endif

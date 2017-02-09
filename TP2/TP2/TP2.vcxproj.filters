@@ -30,6 +30,9 @@
     <ClInclude Include="Specialite.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="Hopital.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Infirmier.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Specialite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hopital.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

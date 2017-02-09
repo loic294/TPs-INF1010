@@ -1,5 +1,5 @@
 /********************************************
-* Titre: Travail pratique #1 - Medecin.cpp
+* Titre: Travail pratique #2 - Specialite.cpp
 * Date: 31 janvier 2017
 * Auteur: Julien Bergeron (1829496) et Loic Bellemare-Alford (1846135)
 *******************************************/
@@ -67,12 +67,14 @@ void Specialite::modifierNiveau(unsigned int niveau)
 /*
 Affiche les informations sur la specialite
 */
-void Specialite::information() const 
+void Specialite::information()
 {
-	
 	std::cout << " | " << domaine_  << AFFICHER_ESPACE(espace_domaine - domaine_.size());
 	std::cout << " | " << AFFICHER_ESPACE(espace_niveau - std::to_string(niveau_).size()) << niveau_;
-
 	std::cout << AFFICHER_ESPACE(espace_niveau) << " | ";
+
 }
 
+std::ostream& operator<<(std::ostream& o, Specialite& specialiste) {
+	return o;
+}
